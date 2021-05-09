@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+    <H1>Ajout d'une bouteille</H1>
+    <form action="/whisky/new" method="POST">
+
+    Distillerie : 
+        <input type="text" name="dist" value="<%=dist%>" /> <br/>
+    Nom de la bouteille : 
+        <input type="text" name="bout" value="<%=bout%>" /> <br/>
+
+    Combien avez-vous payé ? 
+        <input type="int" name="prix" value="<%=prix%>" /> <br/>
+
+    Qu'en avez-vous pensé ? 
+        <input type="text" name="avis" value="<%=avis%>" /> <br/>
+
+    <input type = "hidden" name="idwhisky" value ="<%= idwhisky%>">
+    <input type = "submit" name="save" value = "Enregistrer"/> <br/>
+    <input type = "submit" value="Retour à mon bar" formaction="/whisky"/>
+    </form>
+    </body>
+</html>

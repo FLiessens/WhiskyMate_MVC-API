@@ -1,0 +1,20 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <H1>Mon bar</H1>
+        <p>Bienvenue dans le bar ! Ici vous pouvez consulter toutes les bouteilles précédemment enregistrées</p>
+        <a href="/whisky/add">Ajouter une bouteille</a>
+        <ul>
+            <% for (let i = 0 ; i < whiskies.length ; i++) { %>
+
+            <li> 
+                <%= whiskies[i].dist%> <%=whiskies[i].bout %> <%=whiskies[i].prix %> <%=whiskies[i].avis %>
+                <a href="/whisky/update/<%=i%>"> Modifier </a>
+                <a href="/whisky/remove/<%=i%>"> Effacer </a>
+            </li>
+
+            <% } %>
+        </ul>
+    </body>
+</html>
